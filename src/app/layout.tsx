@@ -31,7 +31,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           ><ClerkProvider>
-            <div className="h-[150px] w-full">
+            <div className="h-[290px] w-full">
             <NavBar/>
             </div>
             {children}
