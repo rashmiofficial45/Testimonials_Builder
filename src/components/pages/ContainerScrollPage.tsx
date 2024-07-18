@@ -7,7 +7,7 @@ type Props = {}
 
 export const ContainerScrollPage = (props: Props) => {
   return (
-    <div className="flex mt-[-200px] flex-col overflow-hidden">
+    <div className="flex flex-col overflow-hidden">
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
           <Meteors number={60} />
           <ContainerScroll

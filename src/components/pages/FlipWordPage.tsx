@@ -1,5 +1,6 @@
 import React from 'react'
 import { FlipWords } from '../ui/flip-words'
+import Link from 'next/link';
 
 const words = ["Better", "Organised", "Beautiful", "Modern"];
 type Props = {}
@@ -26,12 +27,16 @@ export const FlipWordPage = (props: Props) => {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+        <Link href={"/pricing"}>
           <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
             Pricing
           </button>
+          </Link>
+          <Link href={"/sign-in"}>
           <button className="rounded-lg px-4 py-2 bg-blend-color-burn text-black border border-zinc-800 dark:border-slate-300 border-dashed dark:text-white ">
             Try Free
           </button>
+          </Link>
         </div>
       </div>
     </div>

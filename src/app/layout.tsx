@@ -5,10 +5,6 @@ import { ThemeProvider } from "@/components/global/theme-provider"
 import { NavBar } from "@/components/global/navBar";
 import {
   ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
 } from '@clerk/nextjs'
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,9 +27,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           ><ClerkProvider>
-            <div className="h-[290px] w-full">
+
             <NavBar/>
-            </div>
             {children}
             </ClerkProvider>
         </ThemeProvider>
