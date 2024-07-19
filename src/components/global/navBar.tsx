@@ -14,7 +14,7 @@ import Link from "next/link";
 export const NavBar = () => {
   return (
     <>
-      <div className="flex justify-around p-5 ">
+      <div className="flex justify-between p-5 ">
         <Link href={"/"}>
         <Image className="dark:invert" src={"/logo.png"} alt="" width={200} height={100}></Image>
         </Link>
@@ -34,7 +34,7 @@ export const NavBar = () => {
             </button>
                 </SignInButton>
           </SignedOut>
-        <div className="flex gap-4 mr-4">
+        <div className="flex mr-2">
           <SignedIn>
             <UserButton />
           </SignedIn>

@@ -57,7 +57,7 @@ const ThreeDCardDemo = (props: Props) => {
       <Dot className="mt-16">
         <TracingBeam className="px-1">
           <div className="grid grid-cols-2 gap-x-40 w-full">
-            <div className="w-full col-span-1 mt-20">
+            <div className="w-full col-span-2 md:col-span-1 mt-20 dark:invert">
               <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                 <p className="text-[2.5rem] font-semibold">
                   Quick to setup<span className="text-[#5046e6]">.</span>
@@ -92,7 +92,7 @@ const ThreeDCardDemo = (props: Props) => {
               </BoxReveal>
             </div>
 
-            <CardContainer className="inter-var col-span-1 w-full">
+            <CardContainer className="inter-var col-span-2 md:col-span-1 w-full">
               <CardItem translateZ="100" className="w-full">
                 <Image
                   src="/landing-page.png"
@@ -103,7 +103,7 @@ const ThreeDCardDemo = (props: Props) => {
                 />
               </CardItem>
             </CardContainer>
-            <CardContainer className="inter-var">
+            <CardContainer className="inter-var col-span-2 md:col-span-1">
               <CardItem translateZ="100" className="w-full mt-4">
                 <Image
                   src="/integrations.png"
@@ -115,7 +115,7 @@ const ThreeDCardDemo = (props: Props) => {
               </CardItem>
             </CardContainer>
 
-            <div className="col-span-1 mt-20">
+            <div className="col-span-2 md:col-span-1 mt-20 dark:invert">
               <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                 <p className="text-[2.5rem] font-semibold">
                   Easy to manage<span className="text-[#5046e6]">.</span>
@@ -144,7 +144,7 @@ const ThreeDCardDemo = (props: Props) => {
               </BoxReveal>
             </div>
 
-            <div className="col-span-1 mt-20">
+            <div className="col-span-2 md:col-span-1 mt-20 dark:invert">
               <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                 <p className="text-[2.5rem] font-semibold">
                   Track the Metrics<span className="text-[#5046e6]">.</span>
@@ -184,7 +184,7 @@ const ThreeDCardDemo = (props: Props) => {
               </BoxReveal>
             </div>
 
-            <CardContainer className="inter-var">
+            <CardContainer className="inter-var col-span-2 md:col-span-1">
               <CardItem translateZ="100" className="w-full mt-4">
                 <Image
                   src="/metrics.png"
@@ -195,7 +195,7 @@ const ThreeDCardDemo = (props: Props) => {
                 />
               </CardItem>
             </CardContainer>
-            <CardContainer className="inter-var">
+            <CardContainer className="inter-var col-span-2 md:col-span-1">
               <CardItem translateZ="100" className="w-full mt-4">
                 <Image
                   src="/more-social-proof.png"
@@ -206,7 +206,9 @@ const ThreeDCardDemo = (props: Props) => {
                 />
               </CardItem>
             </CardContainer>
-            <div className="col-span-1 mt-20">
+
+
+            <div className="col-span-2 md:col-span-1 mt-20 dark:invert">
               <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                 <p className="text-[2.5rem] font-semibold">
                   More social proof
@@ -249,7 +251,7 @@ const ThreeDCardDemo = (props: Props) => {
               </BoxReveal>
             </div>
 
-            <div className="col-span-1 mt-20">
+            <div className="col-span-2 md:col-span-1 mt-20 dark:invert">
               <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                 <p className="text-[2.5rem] font-semibold">
                   Embed the Wall of Love
@@ -284,8 +286,8 @@ const ThreeDCardDemo = (props: Props) => {
               </BoxReveal>
             </div>
 
-            <CardContainer className="inter-var">
-              <CardItem translateZ="100" className="w-full mt-4">
+            <CardContainer className="inter-var col-span-2 md:col-span-1 w-full">
+              <CardItem translateZ="100" className="mt-4">
                 <Image
                   src="/wall-of-love.png"
                   height={400}
