@@ -6,7 +6,6 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 
-import { ModeToggle } from "@/components/global//mode-toggle";
 import { ChevronRight } from "lucide-react";
 import { NavigationMenuDemo } from "../pages/NavMenuPage";
 import Image from "next/image";
@@ -38,9 +37,6 @@ export const NavBar = () => {
           <SignedIn>
             <UserButton />
           </SignedIn>
-        </div>
-        <div>
-          <ModeToggle />
         </div>
         </div>
       </div>

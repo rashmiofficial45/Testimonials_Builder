@@ -54,10 +54,12 @@ const FollowingPointerDemo = () => {
 const ThreeDCardDemo = (props: Props) => {
   return (
     <>
-      <Dot className="mt-16">
+      <Dot className="">
         <TracingBeam className="px-1">
-          <div className="grid grid-cols-2 gap-x-40 w-full">
-            <div className="w-full col-span-2 md:col-span-1 mt-20 dark:invert">
+
+
+          <div className="grid w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:grid-flow-row-dense md:gap-x-40">
+            <div className="w-full col-span-1 mt-36 dark:invert px-8 md:p-0">
               <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                 <p className="text-[2.5rem] font-semibold">
                   Quick to setup<span className="text-[#5046e6]">.</span>
@@ -92,30 +94,21 @@ const ThreeDCardDemo = (props: Props) => {
               </BoxReveal>
             </div>
 
-            <CardContainer className="inter-var col-span-2 md:col-span-1 w-full">
+            <CardContainer className="inter-var col-span-1 w-full px-8 md:p-0">
               <CardItem translateZ="100" className="w-full">
                 <Image
                   src="/landing-page.png"
-                  height={400}
-                  width={600}
-                  className="h-100 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  height={405}
+                  width={540}
+                  className="h-96 w-full block object-contain mx-auto relative rounded-xl group-hover/card:shadow-xl dark:invert"
                   alt="thumbnail"
                 />
               </CardItem>
             </CardContainer>
-            <CardContainer className="inter-var col-span-2 md:col-span-1">
-              <CardItem translateZ="100" className="w-full mt-4">
-                <Image
-                  src="/integrations.png"
-                  height={400}
-                  width={600}
-                  className=" w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                  alt="thumbnail"
-                />
-              </CardItem>
-            </CardContainer>
+          </div>
 
-            <div className="col-span-2 md:col-span-1 mt-20 dark:invert">
+          <div className="grid w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:grid-flow-row-dense md:gap-x-40">
+            <div className="md:col-start-2 w-full col-span-1 mt-20 dark:invert px-8 md:p-0">
               <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                 <p className="text-[2.5rem] font-semibold">
                   Easy to manage<span className="text-[#5046e6]">.</span>
@@ -144,7 +137,21 @@ const ThreeDCardDemo = (props: Props) => {
               </BoxReveal>
             </div>
 
-            <div className="col-span-2 md:col-span-1 mt-20 dark:invert">
+            <CardContainer className="inter-var col-span-1 w-full px-8 md:p-0">
+              <CardItem translateZ="100" className="w-full mt-4">
+                <Image
+                  src="/integrations.png"
+                  height={400}
+                  width={600}
+                  className=" w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="thumbnail"
+                />
+              </CardItem>
+            </CardContainer>
+          </div>
+
+          <div className="grid w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:grid-flow-row-dense md:gap-x-40">
+            <div className="w-full col-span-1 mt-20 dark:invert px-8 md:p-0">
               <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                 <p className="text-[2.5rem] font-semibold">
                   Track the Metrics<span className="text-[#5046e6]">.</span>
@@ -184,7 +191,7 @@ const ThreeDCardDemo = (props: Props) => {
               </BoxReveal>
             </div>
 
-            <CardContainer className="inter-var col-span-2 md:col-span-1">
+            <CardContainer className="inter-var col-span-1 w-full px-8 md:p-0">
               <CardItem translateZ="100" className="w-full mt-4">
                 <Image
                   src="/metrics.png"
@@ -195,20 +202,10 @@ const ThreeDCardDemo = (props: Props) => {
                 />
               </CardItem>
             </CardContainer>
-            <CardContainer className="inter-var col-span-2 md:col-span-1">
-              <CardItem translateZ="100" className="w-full mt-4">
-                <Image
-                  src="/more-social-proof.png"
-                  height={400}
-                  width={600}
-                  className="h-100 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                  alt="thumbnail"
-                />
-              </CardItem>
-            </CardContainer>
+          </div>
 
-
-            <div className="col-span-2 md:col-span-1 mt-20 dark:invert">
+          <div className="grid w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:grid-flow-row-dense md:gap-x-40">
+            <div className="w-full md:col-start-2 col-span-1 mt-20 dark:invert px-8 md:p-0">
               <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                 <p className="text-[2.5rem] font-semibold">
                   More social proof
@@ -251,7 +248,21 @@ const ThreeDCardDemo = (props: Props) => {
               </BoxReveal>
             </div>
 
-            <div className="col-span-2 md:col-span-1 mt-20 dark:invert">
+            <CardContainer className="inter-var col-span-1 w-full px-8 md:p-0">
+              <CardItem translateZ="100" className="w-full mt-4">
+                <Image
+                  src="/more-social-proof.png"
+                  height={400}
+                  width={600}
+                  className="h-100 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="thumbnail"
+                />
+              </CardItem>
+            </CardContainer>
+          </div>
+
+          <div className="grid w-full grid-cols-1 gap-y-10 md:grid-cols-2 md:grid-flow-row-dense md:gap-x-40">
+            <div className="w-full col-span-1 mt-20 dark:invert px-8 md:p-0">
               <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                 <p className="text-[2.5rem] font-semibold">
                   Embed the Wall of Love
@@ -286,8 +297,8 @@ const ThreeDCardDemo = (props: Props) => {
               </BoxReveal>
             </div>
 
-            <CardContainer className="inter-var col-span-2 md:col-span-1 w-full">
-              <CardItem translateZ="100" className="mt-4">
+            <CardContainer className="inter-var col-span-1 w-full px-8 md:p-0">
+              <CardItem translateZ="100" className="w-full mt-4">
                 <Image
                   src="/wall-of-love.png"
                   height={400}
