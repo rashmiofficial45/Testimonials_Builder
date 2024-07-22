@@ -303,7 +303,7 @@ const ThreeDCardDemo = (props: Props) => {
                   src="/wall-of-love.png"
                   height={400}
                   width={600}
-                  className="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  className="h-96 w-full object-contain rounded-xl group-hover/card:shadow-xl"
                   alt="thumbnail"
                 />
               </CardItem>

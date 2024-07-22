@@ -10,7 +10,13 @@ import { ChevronRight } from "lucide-react";
 import { NavigationMenuDemo } from "../pages/NavMenuPage";
 import Image from "next/image";
 import Link from "next/link";
+const userButtonAppearance = {
+  elements: {
+    userButtonAvatarBox: "w-10 h-10", // Custom width and height
+  }
+}
 export const NavBar = () => {
+
   return (
     <>
       <div className="flex justify-between p-5 ">
@@ -20,7 +26,7 @@ export const NavBar = () => {
         <div className="">
     <NavigationMenuDemo/>
         </div>
-        <div className="flex justify-end gap-4 mr-4">
+        <div className="lg:flex justify-end gap-4 mr-4 hidden">
           <SignedOut>
               <SignUpButton>
             <button className="px-4 py-2 h-12 rounded-md border border-black dark:border-white dark:border-dashed bg-white text-black dark:text-white dark:bg-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
@@ -35,7 +41,7 @@ export const NavBar = () => {
           </SignedOut>
         <div className="flex mr-2">
           <SignedIn>
-            <UserButton />
+            <UserButton appearance={userButtonAppearance}/>
           </SignedIn>
         </div>
         </div>

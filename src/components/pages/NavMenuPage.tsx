@@ -2,7 +2,8 @@
 
 import * as React from "react"
 import Link from "next/link"
-
+import { motion } from 'framer-motion'
+import { useState } from 'react'
 import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
@@ -52,12 +53,75 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ]
 
+export const Dropdown = () => {
+
+  const [crossed, setCrossedState] = useState(false)
+  return (
+    <>
+    <button
+      aria-expanded={crossed}
+      onClick={() => setCrossedState((e) => !e)}
+      className={
+        'flex aspect-square h-fit select-none flex-col items-center justify-center rounded-full'
+      }><motion.div
+      style={{
+        width: '30px',
+        borderTop: '2px solid var(--neutral-500)',
+        transformOrigin: 'center'
+      }}
+      initial={{ translateY: '-3px' }}
+      animate={
+        crossed ? { rotate: '45deg', translateY: '1px' } : { translateY: '-3px', rotate: '0deg' }
+      }
+      transition={{ bounce: 0, duration: 0.1 }}
+    />
+    <motion.div className=""
+      transition={{ bounce: 0, duration: 0.1 }}
+      style={{
+        width: '30px',
+        borderTop: '2px solid var(--neutral-500)',
+        transformOrigin: 'center'
+      }}
+      initial={{ translateY: '3px' }}
+      animate={
+        crossed
+          ? { rotate: '-45deg', translateY: '-1px' }
+          : { translateY: '3px', rotate: '0deg', scaleX: 1 }
+      }
+    />
+  </button>
+  {crossed?(
+    <div className=" h-screen w-screen">
+    <div className="fixed h-screen w-screen bg-primary-foreground text-primary flex flex-col justify-center items-center m-0 p-0">
+      <button onClick={
+        () => setCrossedState((e) => !e)
+      } className="text-center text-5xl pb-8 font-bold">
+        <Link href={"customer"}>Customers</Link>
+      </button>
+      <button onClick={
+        () => setCrossedState((e) => !e)
+      } className="text-center text-5xl pb-8 font-bold">
+        <Link href={"integration"}>Integration</Link>
+      </button>
+      <button onClick={
+        () => setCrossedState((e) => !e)
+      } className="text-center text-5xl font-bold">
+        <Link href={"pricing"}>Pricing</Link>
+      </button>
+
+    </div>
+  </div>):(<></>)}
+    </>
+  )
+}
+
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu>
-      <NavigationMenuList>
+
+      <NavigationMenuList className="hidden lg:flex">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Customers</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
@@ -73,7 +137,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/pricing" legacyBehavior passHref>
+          <Link href="/integrations" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Integrations
             </NavigationMenuLink>
@@ -87,6 +151,12 @@ export function NavigationMenuDemo() {
           </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
+
+        <NavigationMenuList className="lg:hidden">
+            <NavigationMenuItem>
+            <Dropdown/>
+              </NavigationMenuItem>
+        </NavigationMenuList>
     </NavigationMenu>
   )
 }
